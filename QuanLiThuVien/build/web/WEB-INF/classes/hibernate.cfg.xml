@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=QuanLyThuVien</property>
+    <property name="hibernate.connection.username">sa</property>
+    <property name="hibernate.connection.password">sv</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <mapping class="entity.LichsumuonphongId"/>
+    <mapping class="entity.Chude"/>
+    <mapping class="entity.Nhaxuatban"/>
+    <mapping class="entity.Phong"/>
+    <mapping class="entity.Lichsumuonphong"/>
+    <mapping class="entity.Nhanvien"/>
+    <mapping class="entity.Tacgia"/>
+    <mapping class="entity.Docgia"/>
+    <mapping class="entity.Thongtinmuontra"/>
+    <mapping class="entity.Thugopy"/>
+    <mapping class="entity.Banphat"/>
+    <mapping class="entity.Nguoidangky"/>
+    <mapping class="entity.Sach"/>
+    <mapping class="entity.Vitri"/>
+    <mapping class="entity.Loptaphuan"/>
+    <mapping class="entity.Nhomsach"/>
+    <mapping class="entity.User"/>
+  </session-factory>
+</hibernate-configuration>
