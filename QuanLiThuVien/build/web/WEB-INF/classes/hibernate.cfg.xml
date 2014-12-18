@@ -7,14 +7,13 @@
     <property name="hibernate.connection.username">sa</property>
     <property name="hibernate.connection.password">sv</property>
     <property name="hibernate.current_session_context_class">thread</property>
-    <mapping class="entity.LichsumuonphongId"/>
     <mapping class="entity.Chude"/>
     <mapping class="entity.Nhaxuatban"/>
     <mapping class="entity.Phong"/>
     <mapping class="entity.Lichsumuonphong"/>
     <mapping class="entity.Nhanvien"/>
-    <mapping class="entity.Tacgia"/>
     <mapping class="entity.Docgia"/>
+    <mapping class="entity.Tacgia"/>
     <mapping class="entity.Thongtinmuontra"/>
     <mapping class="entity.Thugopy"/>
     <mapping class="entity.Banphat"/>

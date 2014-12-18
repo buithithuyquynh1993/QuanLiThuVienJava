@@ -17,4 +17,9 @@ public class PublicController {
         return "SearchBook";
     }
     
+     @RequestMapping(value = "/DetailBook")
+    public String DetailBook()
+    {
+        return "DetailBook";
+    }
 }

@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 10, 2014 9:29:01 AM by Hibernate Tools 4.3.1
+// Generated Dec 18, 2014 8:03:55 AM by Hibernate Tools 4.3.1
 
 
 import java.io.Serializable;
@@ -27,6 +27,7 @@ public class User  implements java.io.Serializable {
      private Nhanvien nhanvien;
      private Serializable password;
      private Serializable passwordSalt;
+     private Serializable role;
 
     public User() {
     }
@@ -38,12 +39,13 @@ public class User  implements java.io.Serializable {
         this.nhanvien = nhanvien;
         this.password = password;
     }
-    public User(int id, Docgia docgia, Nhanvien nhanvien, Serializable password, Serializable passwordSalt) {
+    public User(int id, Docgia docgia, Nhanvien nhanvien, Serializable password, Serializable passwordSalt, Serializable role) {
        this.id = id;
        this.docgia = docgia;
        this.nhanvien = nhanvien;
        this.password = password;
        this.passwordSalt = passwordSalt;
+       this.role = role;
     }
    
      @Id 
@@ -96,6 +98,16 @@ public class User  implements java.io.Serializable {
     
     public void setPasswordSalt(Serializable passwordSalt) {
         this.passwordSalt = passwordSalt;
+    }
+
+    
+    @Column(name="ROLE")
+    public Serializable getRole() {
+        return this.role;
+    }
+    
+    public void setRole(Serializable role) {
+        this.role = role;
     }
 
 
