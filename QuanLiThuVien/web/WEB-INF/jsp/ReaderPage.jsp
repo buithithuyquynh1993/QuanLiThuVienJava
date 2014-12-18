@@ -10,8 +10,9 @@
     <jsp:attribute name= "content">
     <div class="col-md-4">
         <ul class="list-group">
-            <li class="list-group-item"><a href="${pageContext.request.contextPath}/Public/SearchBook.htm"> Trang chủ </a> </li>
-            <li class="list-group-item"><a href="${pageContext.request.contextPath}/Reader/ReaderPage.htm"> Trang độc giả </a> </li>
+            <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/ReaderList.htm"> Danh Sách Độc Giả </a> </li>
+            <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/UpdateReaderInformation.htm"> Chỉnh Sửa thông tin độc giả </a> </li>
+            <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/ReaderDetail.htm"> Chi tiết độc giả </a> </li>
         </ul>
     </div>
     <div class="col-md-8">

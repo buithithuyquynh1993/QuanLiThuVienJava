@@ -10,13 +10,12 @@
     <jsp:attribute name= "content">
     <div class="col-md-4">
         <ul class="list-group">
-            <li class="list-group-item"><a href="${pageContext.request.contextPath}/Public/SearchBook.htm"> Trang Chủ </a> </li>
             <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/AddBook.htm"> Thêm Sách </a> </li>
             <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/UpdateBook.htm"> Chỉnh sửa sách </a> </li>
             <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/AddPosition.htm"> Thêm Vị Trí Sách </a> </li>
             <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/AddAuthor.htm"> Thêm Tác Giả </a> </li>
+            <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/ReaderList.htm"> Danh Sách Độc Giả </a> </li>
             <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/UpdateReaderInformation.htm"> Chỉnh Sửa thông tin độc giả </a> </li>
-            <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/BookDetail.htm"> Chi tiết sách </a> </li>
             <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/ReaderDetail.htm"> Chi tiết độc giả </a> </li>
             
         </ul>
