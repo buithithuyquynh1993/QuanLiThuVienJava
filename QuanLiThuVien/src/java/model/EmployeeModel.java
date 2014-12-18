@@ -16,9 +16,21 @@ import javax.xml.bind.annotation.XmlElement;
 import org.hibernate.*;
 public class EmployeeModel {
     
-    //    Add New Book
-    public List<Banphat> GetAllAuthors(){
-        return null;
+    //   Begin:  Add New Book
+    public List<Tacgia> GetAllAuthors(){
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        List<Tacgia> Result = new ArrayList<>();
+        try{
+            s.beginTransaction();
+            Result = s.createCriteria(Tacgia.class).list();
+            s.getTransaction().commit();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            Result = null;
+        }
+        return Result;
     }
     public List<Nhaxuatban> GetAllPublisher(){
         return null;
@@ -35,4 +47,5 @@ public class EmployeeModel {
     public String SaveNewBook(XmlElement node)
     {   return null;
     }
+    //   End:  Add New Book
 }

@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document Of Thao*/
+
+.subscribeForm span{
+	min-width: 100px;
+	display:inline-block;
+}
+.subscribeForm input{
+	min-width: 400px;
+}
+.subscribeForm option{
+	min-width: 150px;
+}
+.subsOption span{
+	min-width: 50px;
+}
