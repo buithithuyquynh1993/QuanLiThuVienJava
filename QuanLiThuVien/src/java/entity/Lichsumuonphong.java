@@ -1,14 +1,12 @@
 package entity;
-// Generated Dec 10, 2014 9:29:01 AM by Hibernate Tools 4.3.1
+// Generated Dec 18, 2014 8:03:55 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
-import javax.persistence.AttributeOverride;
-import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -26,44 +24,43 @@ import javax.persistence.TemporalType;
 public class Lichsumuonphong  implements java.io.Serializable {
 
 
-     private LichsumuonphongId id;
+     private int id;
      private Docgia docgia;
      private Phong phong;
+     private Date thoiGianMuon;
      private Date thoiGianTra;
+     private Character deleteFlag;
 
     public Lichsumuonphong() {
     }
 
 	
-    public Lichsumuonphong(LichsumuonphongId id, Docgia docgia, Phong phong) {
+    public Lichsumuonphong(int id) {
         this.id = id;
-        this.docgia = docgia;
-        this.phong = phong;
     }
-    public Lichsumuonphong(LichsumuonphongId id, Docgia docgia, Phong phong, Date thoiGianTra) {
+    public Lichsumuonphong(int id, Docgia docgia, Phong phong, Date thoiGianMuon, Date thoiGianTra, Character deleteFlag) {
        this.id = id;
        this.docgia = docgia;
        this.phong = phong;
+       this.thoiGianMuon = thoiGianMuon;
        this.thoiGianTra = thoiGianTra;
+       this.deleteFlag = deleteFlag;
     }
    
-     @EmbeddedId
+     @Id 
 
     
-    @AttributeOverrides( {
-        @AttributeOverride(name="iddocGia", column=@Column(name="IDDocGia", nullable=false) ), 
-        @AttributeOverride(name="idphong", column=@Column(name="IDPhong", nullable=false) ), 
-        @AttributeOverride(name="thoiGianMuon", column=@Column(name="ThoiGianMuon", nullable=false, length=23) ) } )
-    public LichsumuonphongId getId() {
+    @Column(name="ID", unique=true, nullable=false)
+    public int getId() {
         return this.id;
     }
     
-    public void setId(LichsumuonphongId id) {
+    public void setId(int id) {
         this.id = id;
     }
 
 @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="IDDocGia", nullable=false, insertable=false, updatable=false)
+    @JoinColumn(name="IDDocGia")
     public Docgia getDocgia() {
         return this.docgia;
     }
@@ -73,13 +70,23 @@ public class Lichsumuonphong  implements java.io.Serializable {
     }
 
 @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="IDPhong", nullable=false, insertable=false, updatable=false)
+    @JoinColumn(name="IDPhong")
     public Phong getPhong() {
         return this.phong;
     }
     
     public void setPhong(Phong phong) {
         this.phong = phong;
+    }
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name="ThoiGianMuon", length=23)
+    public Date getThoiGianMuon() {
+        return this.thoiGianMuon;
+    }
+    
+    public void setThoiGianMuon(Date thoiGianMuon) {
+        this.thoiGianMuon = thoiGianMuon;
     }
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -90,6 +97,16 @@ public class Lichsumuonphong  implements java.io.Serializable {
     
     public void setThoiGianTra(Date thoiGianTra) {
         this.thoiGianTra = thoiGianTra;
+    }
+
+    
+    @Column(name="delete_flag", length=1)
+    public Character getDeleteFlag() {
+        return this.deleteFlag;
+    }
+    
+    public void setDeleteFlag(Character deleteFlag) {
+        this.deleteFlag = deleteFlag;
     }
 
 

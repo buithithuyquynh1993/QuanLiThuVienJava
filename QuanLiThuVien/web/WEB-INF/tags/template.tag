@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/templates/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/templates/css/font-awesome.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/templates/css/animate.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/templates/css/templatemo_misc.css"">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/templates/css/templatemo_misc.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/templates/css/templatemo_style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/templates/css/reader_style.css">
 
@@ -37,21 +37,21 @@
         <div class="container">
             <div class="main-header">
                 <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-10">
+                    <div class="col-md-2 col-sm-6 col-xs-10">
                         <div class="logo">
                             <a rel="nofollow" href="http://www.templatemo.com/preview/templatemo_409_travel">
                                 <img src="${pageContext.request.contextPath}/templates/images/logo.png" alt="travel html5 website template - templatemo" title="travel - free html5 template">
                             </a>
                         </div> <!-- /.logo -->
                     </div> <!-- /.col-md-4 -->
-                    <div class="col-md-8 col-sm-6 col-xs-2">
+                    <div class="col-md-10 col-sm-6 col-xs-2">
                         <div class="main-menu">
                             <ul class="visible-lg visible-md">
-                                <li><a href="index.html">Trang Chủ</a></li>
-                                <li class="active"><a href="services.html">Tìm Kiếm Sách</a></li>
-                                <li><a href="events.html">Đăng Ký Tập Huấn</a></li>
-                                <li><a href="about.html">Liên hệ</a></li>
-                                <li><a href="contact.html">Đăng nhập</a></li>
+                                <li><a href="${pageContext.request.contextPath}/Public/SearchBook.htm"> Trang Chủ </a></li>
+                                <li><a href="services.html"> Tìm Kiếm Sách </a></li>
+                                <li><a href="events.html"> Lớp Tập Huấn </a></li>
+                                <li><a href="about.html"> Góp Ý </a></li>
+                                <li><a href="~/Public/Instructions"> Hướng Dẫn </a></li>
                             </ul>
                             <a href="#" class="toggle-menu visible-sm visible-xs">
                                 <i class="fa fa-bars"></i>
@@ -64,11 +64,11 @@
                 <div class="col-md-12 visible-sm visible-xs">
                     <div class="menu-responsive">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li class="active"><a href="services.html">Services</a></li>
-                            <li><a href="events.html">Events</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="${pageContext.request.contextPath}/Public/SearchBook.htm"> Trang Chủ </a></li>
+                                <li><a href="services.html"> Tìm Kiếm Sách </a></li>
+                                <li><a href="events.html"> Lớp Tập Huấn </a></li>
+                                <li><a href="about.html"> Góp Ý </a></li>
+                                <li><a href="~/Public/Instructions"> Hướng Dẫn </a></li>
                         </ul>
                     </div> <!-- /.menu-responsive -->
                 </div> <!-- /.col-md-12 -->

@@ -1,5 +1,5 @@
 package entity;
-// Generated Dec 10, 2014 9:29:01 AM by Hibernate Tools 4.3.1
+// Generated Dec 18, 2014 8:03:55 AM by Hibernate Tools 4.3.1
 
 
 import java.io.Serializable;
@@ -25,6 +25,7 @@ public class Thugopy  implements java.io.Serializable {
      private int id;
      private Serializable noiDung;
      private Date ngayGopY;
+     private Boolean daXem;
 
     public Thugopy() {
     }
@@ -33,10 +34,11 @@ public class Thugopy  implements java.io.Serializable {
     public Thugopy(int id) {
         this.id = id;
     }
-    public Thugopy(int id, Serializable noiDung, Date ngayGopY) {
+    public Thugopy(int id, Serializable noiDung, Date ngayGopY, Boolean daXem) {
        this.id = id;
        this.noiDung = noiDung;
        this.ngayGopY = ngayGopY;
+       this.daXem = daXem;
     }
    
      @Id 
@@ -69,6 +71,16 @@ public class Thugopy  implements java.io.Serializable {
     
     public void setNgayGopY(Date ngayGopY) {
         this.ngayGopY = ngayGopY;
+    }
+
+    
+    @Column(name="DaXem")
+    public Boolean getDaXem() {
+        return this.daXem;
+    }
+    
+    public void setDaXem(Boolean daXem) {
+        this.daXem = daXem;
     }
 
 
