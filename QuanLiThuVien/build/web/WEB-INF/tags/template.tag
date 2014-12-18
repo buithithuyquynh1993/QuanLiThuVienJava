@@ -8,7 +8,10 @@
 
 <%-- The list of normal or fragment attributes can be specified here: --%>
 <%@attribute name="message"%>
+<%@attribute name="link_css" fragment="flase" %>
 <%@attribute name="content" fragment="true" %>
+
+<html>
 <head>
     <meta charset="utf-8">
     <title>Services Page - Travel by templatemo</title>
@@ -24,12 +27,9 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/templates/css/templatemo_style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/templates/css/reader_style.css">
 
-    <script src="${pageContext.request.contextPath}/templates/js/jquery.js"></script>
     <script src="${pageContext.request.contextPath}/templates/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
     <script src="${pageContext.request.contextPath}/templates/js/vendor/jquery-1.11.0.min.js"></script>
-
-     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
 </head>
 <body>

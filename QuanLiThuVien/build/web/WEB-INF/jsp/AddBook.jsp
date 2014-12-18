@@ -1,32 +1,116 @@
 <%-- 
     Document   : SearchBook
     Created on : Dec 9, 2014, 10:52:56 AM
-    Author     : USER
+    Author     : Thao
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="me" uri="/WEB-INF/tlds/mytags.tld" %>
-<me:template >
+<me:template>
     <jsp:attribute name= "content">
-    <div class="col-md-4">
-        <ul class="list-group">
-            <li class="list-group-item"><a href="${pageContext.request.contextPath}/Public/SearchBook.htm"> Trang Chủ </a> </li>
-            <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/AddBook.htm"> Thêm Sách </a> </li>
-            <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/UpdateBook.htm"> Chỉnh sửa sách </a> </li>
-            <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/AddPosition.htm"> Thêm Vị Trí Sách </a> </li>
-            <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/AddAuthor.htm"> Thêm Tác Giả </a> </li>
-            <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/UpdateReaderInformation.htm"> Chỉnh Sửa thông tin độc giả </a> </li>
-            <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/BookDetail.htm"> Chi tiết sách </a> </li>
-            <li class=" list-group-item"><a href="${pageContext.request.contextPath}/Employee/ReaderDetail.htm"> Chi tiết độc giả </a> </li>
-            
-        </ul>
-    </div>
-    <div class="col-md-8">
-         <div class="panel panel-success" align="center">
-        <div class="panel-heading">
-            <font size="6" color="blue" face="arial"><b>   Thêm Sách </b> </font>
-        </div>
-    </div>
-    </div>
-    </jsp:attribute>
+        <form class="subscribeForm ticket-item" method="post">
+            <h3 class="widget-title text-center" style="display:block">Thêm sách mới</h3>
+            <h4>Thông tin sách</h4><br>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-md-push-1">
+                    <span>Tên sách: </span><input id="subscribe" type="text"><br/>
+                    <span>Tập: </span>		<input type="text"/><br/>
+                    <span>Cuốn:</span>		<input type="text"/>
+                </div>
+                <div class="col-md-6 col-sm-12 col-md-push-1">
+                    <div style="float: left"><br/>
+                        <a class="ticket-btn">Hiển thị mã vạch</a>
+                    </div>
+                    <div style="float:right; margin-right:40%">
+                        <h5 class="text-center">Mã vạch</h5><br/>
+                        <img src="images/about_1.jpg" width="150" height="80"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-6 col-sm-12 col-md-push-1">
+                    <p>Nội dung tóm tắt:</p><br>
+                    <textarea rows="10" cols="60"></textarea>
+                </div>
+                <div class="col-md-6 col-sm-12 col-md-push-1">
+                    <div style="float: left"><br/><br/><br/><br/>	
+                            <a class="ticket-btn">Brown...</a>
+                    </div>
+                    <div style="float:right; margin-right:40%">
+                            <h5 class="text-center">Mục lục</h5><br/>
+                        <img src="images/about_1.jpg" width="200" height="250"/>
+                    </div>
+                </div>
+            </div>
+            <h4>Thông tin tác giả - Nhà xuất bản</h4>
+            <div class="row text-center">
+                    <span>Tác giả: </span>
+                <select>
+                    <option>a</option>
+                    <option>a</option>
+                    <option>a</option>
+                </select>
+                <span>Quốc tịch: </span>
+                <label>nnnn</label><br/><br/>
+                <span>Nhà xuất bản: </span>
+                <select>
+                    <option>a</option>
+                    <option>a</option>
+                    <option>a</option>
+                </select>
+                <span>Quốc gia: </span>
+                <label>nnnn</label>
+            </div><br/>
+            <h4>Thông tin nhóm sách - Chủ đề</h4>
+            <div class="row" style="margin-left:31%">
+                    <span>Nhóm sách: </span>
+                <select>
+                    <option>a</option>
+                    <option>a</option>
+                    <option>a</option>
+                </select><br/><br/>
+                <span>Chủ đề: </span>
+                <select>
+                    <option>a</option>
+                    <option>a</option>
+                    <option>a</option>
+                </select>
+            </div><br/>
+            <h4>Vị trí sách trên kệ</h4><br/>
+            <div class="row subsOption">
+                <div class="col-md-4">
+                    <span>Tầng: </span>
+                    <select>
+                        <option>a</option>
+                        <option>a</option>
+                        <option>a</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span>Ngăn: </span>
+                    <select>
+                        <option>a</option>
+                        <option>a</option>
+                        <option>a</option>
+                    </select>
+                    </div>
+                <div class="col-md-4">
+                    <span>Kệ: </span>
+                    <select>
+                        <option>a</option>
+                        <option>a</option>
+                        <option>a</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row" style="margin-top:30px">
+                    <div class="col-md-2 col-md-push-2">
+                                            <a class="ticket-btn">Thêm</a>
+                </div>
+                    <div class="col-md-2 col-md-push-5">
+                                            <a class="ticket-btn">Thoát</a>
+                </div>
+            </div>
+        </form>
+</jsp:attribute>
 </me:template>

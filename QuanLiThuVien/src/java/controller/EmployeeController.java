@@ -9,9 +9,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(value="Employee")
+@RequestMapping(value="/Employee")
 public class EmployeeController {
-    @RequestMapping(value = "AddBook")
+    
+    @RequestMapping(value = "/AddBook")
     public String AddBook()
     {
         return "AddBook";
