@@ -14,3 +14,7 @@
 .subsOption span{
 	min-width: 50px;
 }
+.ticket-item h4{
+    font-size: 18px;
+    text-transform: none;
+}

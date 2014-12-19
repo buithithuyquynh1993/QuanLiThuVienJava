@@ -8,6 +8,7 @@
 <%@taglib prefix="me" uri="/WEB-INF/tlds/mytags.tld" %>
 <me:template>
     <jsp:attribute name= "content">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/templates/css/css_myself.css" />
         <form class="subscribeForm ticket-item" method="post">
             <h3 class="widget-title text-center" style="display:block">Thêm sách mới</h3>
             <h4>Thông tin sách</h4><br>
@@ -30,7 +31,7 @@
             <div class="row">
                     <div class="col-md-6 col-sm-12 col-md-push-1">
                     <p>Nội dung tóm tắt:</p><br>
-                    <textarea rows="10" cols="60"></textarea>
+                    <textarea rows="10" cols="65"></textarea>
                 </div>
                 <div class="col-md-6 col-sm-12 col-md-push-1">
                     <div style="float: left"><br/><br/><br/><br/>	
@@ -78,7 +79,7 @@
             </div><br/>
             <h4>Vị trí sách trên kệ</h4><br/>
             <div class="row subsOption">
-                <div class="col-md-4">
+                <div class="col-md-4 col-md-push-1">
                     <span>Tầng: </span>
                     <select>
                         <option>a</option>
@@ -86,7 +87,7 @@
                         <option>a</option>
                     </select>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-md-push-1">
                     <span>Ngăn: </span>
                     <select>
                         <option>a</option>
@@ -94,7 +95,7 @@
                         <option>a</option>
                     </select>
                     </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-md-push-1">
                     <span>Kệ: </span>
                     <select>
                         <option>a</option>
@@ -104,10 +105,10 @@
                 </div>
             </div>
             <div class="row" style="margin-top:30px">
-                    <div class="col-md-2 col-md-push-2">
+                    <div class="col-md-2 col-md-push-3">
                                             <a class="ticket-btn">Thêm</a>
                 </div>
-                    <div class="col-md-2 col-md-push-5">
+                    <div class="col-md-2 col-md-push-6">
                                             <a class="ticket-btn">Thoát</a>
                 </div>
             </div>
