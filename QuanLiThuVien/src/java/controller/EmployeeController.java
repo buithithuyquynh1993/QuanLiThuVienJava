@@ -7,14 +7,20 @@ package controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import model.*;
+import java.util.*;
+import org.springframework.ui.Model;
 
 @Controller
 @RequestMapping(value="/Employee")
 public class EmployeeController {
     
-    @RequestMapping(value = "/AddBook")
-    public String AddBook()
+    @RequestMapping(value = "/addbook")
+    public String AddBook(Model m)
     {
+        EmployeeModel data = new EmployeeModel();
+        m.addAttribute("_list", data.GetAllAuthors());
         return "AddBook";
     }
 }

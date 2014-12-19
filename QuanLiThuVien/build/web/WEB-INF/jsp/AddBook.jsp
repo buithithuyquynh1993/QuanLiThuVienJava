@@ -4,6 +4,7 @@
     Author     : Thao
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="me" uri="/WEB-INF/tlds/mytags.tld" %>
 <me:template>
@@ -47,6 +48,9 @@
             <div class="row text-center">
                     <span>Tác giả: </span>
                 <select>
+                    <c:forEach items="${_list}" var="em">
+                        <option>${em.tenTacGia}</option>
+                    </c:forEach>
                     <option>a</option>
                     <option>a</option>
                     <option>a</option>
