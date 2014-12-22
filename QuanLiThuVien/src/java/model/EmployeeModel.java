@@ -11,27 +11,29 @@ package model;
  */
 import entity.*;
 import java.util.*;
-import static javassist.CtMethod.ConstParameter.string;
 import javax.xml.bind.annotation.XmlElement;
 import org.hibernate.*;
+
 public class EmployeeModel {
     
     //   Begin:  Add New Book
     public List<Tacgia> GetAllAuthors(){
         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
-        List<Tacgia> Result = new ArrayList<>();
+        List<Tacgia> Result = new ArrayList<Tacgia>();
         try{
             s.beginTransaction();
-            Result = s.createCriteria(Tacgia.class).list();
+            Criteria temp = s.createCriteria(Tacgia.class);
+            //Query query= s.createSQLQuery("from TacGia");
+            //Result=query.list();
+            Result = temp.list();
             s.getTransaction().commit();
         }
         catch(Exception e)
         {
-            e.printStackTrace();
             Result = null;
         }
         return Result;
-    }
+    }   
     public List<Nhaxuatban> GetAllPublisher(){
         return null;
     }

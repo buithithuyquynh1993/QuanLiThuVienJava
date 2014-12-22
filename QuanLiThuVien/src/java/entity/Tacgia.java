@@ -26,8 +26,8 @@ public class Tacgia  implements java.io.Serializable {
 
 
      private int id;
-     private Serializable tenTacGia;
-     private Serializable quocTich;
+     private String tenTacGia;
+     private String quocTich;
      private Set<Sach> saches = new HashSet<Sach>(0);
 
     public Tacgia() {
@@ -37,7 +37,7 @@ public class Tacgia  implements java.io.Serializable {
     public Tacgia(int id) {
         this.id = id;
     }
-    public Tacgia(int id, Serializable tenTacGia, Serializable quocTich, Set<Sach> saches) {
+    public Tacgia(int id, String tenTacGia, String quocTich, Set<Sach> saches) {
        this.id = id;
        this.tenTacGia = tenTacGia;
        this.quocTich = quocTich;
@@ -58,21 +58,21 @@ public class Tacgia  implements java.io.Serializable {
 
     
     @Column(name="TenTacGia")
-    public Serializable getTenTacGia() {
+    public String getTenTacGia() {
         return this.tenTacGia;
     }
     
-    public void setTenTacGia(Serializable tenTacGia) {
+    public void setTenTacGia(String tenTacGia) {
         this.tenTacGia = tenTacGia;
     }
 
     
     @Column(name="QuocTich")
-    public Serializable getQuocTich() {
+    public String getQuocTich() {
         return this.quocTich;
     }
     
-    public void setQuocTich(Serializable quocTich) {
+    public void setQuocTich(String quocTich) {
         this.quocTich = quocTich;
     }
 

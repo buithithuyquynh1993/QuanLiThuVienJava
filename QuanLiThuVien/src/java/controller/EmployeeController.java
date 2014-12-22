@@ -11,15 +11,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import model.*;
 import java.util.*;
 import org.springframework.ui.Model;
-
+import entity.*;
 @Controller
 @RequestMapping(value="/Employee")
 public class EmployeeController {
     
-    @RequestMapping(value = "/addbook")
+    @RequestMapping(value = "/addbook", method = RequestMethod.GET)
     public String AddBook(Model m)
     {
         EmployeeModel data = new EmployeeModel();
+        List<Tacgia> list=data.GetAllAuthors();
+        System.out.println(list.size());
         m.addAttribute("_list", data.GetAllAuthors());
         return "AddBook";
     }

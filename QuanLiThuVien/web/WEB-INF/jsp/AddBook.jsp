@@ -51,7 +51,7 @@
                     <c:forEach items="${_list}" var="em">
                         <option>${em.tenTacGia}</option>
                     </c:forEach>
-                    <option>a</option>
+                    <%--<option>${_list}</option>--%>
                     <option>a</option>
                     <option>a</option>
                 </select>
