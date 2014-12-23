@@ -7,5 +7,21 @@
     <property name="hibernate.connection.username">sa</property>
     <property name="hibernate.connection.password">sa</property>
     <property name="hibernate.current_session_context_class">thread</property>
+    <mapping class="entity.Nhaxuatban"/>
+    <mapping class="entity.Tacgia"/>
+    <mapping class="entity.Chude"/>
+    <mapping class="entity.User"/>
+    <mapping class="entity.Nguoidangky"/>
+    <mapping class="entity.Banphat"/>
+    <mapping class="entity.Loptaphuan"/>
+    <mapping class="entity.Vitri"/>
+    <mapping class="entity.Nhomsach"/>
+    <mapping class="entity.Phong"/>
+    <mapping class="entity.Thongtinmuontra"/>
+    <mapping class="entity.Sach"/>
+    <mapping class="entity.Docgia"/>
+    <mapping class="entity.Nhanvien"/>
+    <mapping class="entity.Lichsumuonphong"/>
+    <mapping class="entity.Thugopy"/>
   </session-factory>
 </hibernate-configuration>

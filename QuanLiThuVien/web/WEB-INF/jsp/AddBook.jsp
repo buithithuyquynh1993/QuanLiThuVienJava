@@ -49,11 +49,8 @@
                     <span>Tác giả: </span>
                 <select>
                     <c:forEach items="${_list}" var="em">
-                        <option>${em.tenTacGia}</option>
+                        <option value="${em.id}">${em.tenTacGia}</option>
                     </c:forEach>
-                    <%--<option>${_list}</option>--%>
-                    <option>a</option>
-                    <option>a</option>
                 </select>
                 <span>Quốc tịch: </span>
                 <label>nnnn</label><br/><br/>
