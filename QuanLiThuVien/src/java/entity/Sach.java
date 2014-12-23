@@ -35,12 +35,12 @@ public class Sach  implements java.io.Serializable {
      private Nhaxuatban nhaxuatban;
      private Nhomsach nhomsach;
      private Vitri vitri;
-     private Serializable tenSach;
+     private String tenSach;
      private Date namXb;
      private Integer tap;
      private Integer cuon;
-     private Serializable trangThai;
-     private Serializable noiDungTomTat;
+     private String trangThai;
+     private String noiDungTomTat;
      private String mucLuc;
      private Set<Tacgia> tacgias = new HashSet<Tacgia>(0);
      private Set<Thongtinmuontra> thongtinmuontras = new HashSet<Thongtinmuontra>(0);
@@ -52,7 +52,7 @@ public class Sach  implements java.io.Serializable {
     public Sach(int id) {
         this.id = id;
     }
-    public Sach(int id, Chude chude, Nhaxuatban nhaxuatban, Nhomsach nhomsach, Vitri vitri, Serializable tenSach, Date namXb, Integer tap, Integer cuon, Serializable trangThai, Serializable noiDungTomTat, String mucLuc, Set<Tacgia> tacgias, Set<Thongtinmuontra> thongtinmuontras) {
+    public Sach(int id, Chude chude, Nhaxuatban nhaxuatban, Nhomsach nhomsach, Vitri vitri, String tenSach, Date namXb, Integer tap, Integer cuon, String trangThai, String noiDungTomTat, String mucLuc, Set<Tacgia> tacgias, Set<Thongtinmuontra> thongtinmuontras) {
        this.id = id;
        this.chude = chude;
        this.nhaxuatban = nhaxuatban;
@@ -123,11 +123,11 @@ public class Sach  implements java.io.Serializable {
 
     
     @Column(name="TenSach")
-    public Serializable getTenSach() {
+    public String getTenSach() {
         return this.tenSach;
     }
     
-    public void setTenSach(Serializable tenSach) {
+    public void setTenSach(String tenSach) {
         this.tenSach = tenSach;
     }
 
@@ -163,21 +163,21 @@ public class Sach  implements java.io.Serializable {
 
     
     @Column(name="TrangThai")
-    public Serializable getTrangThai() {
+    public String getTrangThai() {
         return this.trangThai;
     }
     
-    public void setTrangThai(Serializable trangThai) {
+    public void setTrangThai(String trangThai) {
         this.trangThai = trangThai;
     }
 
     
     @Column(name="NoiDungTomTat")
-    public Serializable getNoiDungTomTat() {
+    public String getNoiDungTomTat() {
         return this.noiDungTomTat;
     }
     
-    public void setNoiDungTomTat(Serializable noiDungTomTat) {
+    public void setNoiDungTomTat(String noiDungTomTat) {
         this.noiDungTomTat = noiDungTomTat;
     }
 

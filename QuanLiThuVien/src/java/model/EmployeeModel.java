@@ -92,8 +92,44 @@ public class EmployeeModel {
         }
         return Result;
     }
-    public String SaveNewBook(XmlElement node)
+    public String SaveNewBook(Sach _sach)
     {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        String result = "";
+        try
+        {
+            s.beginTransaction();
+            s.save(_sach);
+            s.getTransaction().commit();
+            result = "Lưu thành công";
+        }
+        catch(Exception ex)
+        {
+            s.getTransaction().rollback();
+            result = "Lưu không thành công";
+        }
+        return result;
     }
     //   End:  Add New Book
+    
+    //Begin Update Book
+    public String EditBook(Sach _sach)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        String result = "";
+        try
+        {
+            s.beginTransaction();
+            s.update(_sach);
+            s.getTransaction().commit();
+            result = "Lưu thành công";
+        }
+        catch(Exception ex)
+        {
+            s.getTransaction().rollback();
+            result = "Lưu không thành công";
+        }
+        return result;
+    }
+    //End Update Book
 }

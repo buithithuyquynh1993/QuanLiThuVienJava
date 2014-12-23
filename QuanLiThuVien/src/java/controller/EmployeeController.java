@@ -12,11 +12,12 @@ import model.*;
 import java.util.*;
 import org.springframework.ui.Model;
 import entity.*;
+import org.springframework.web.bind.annotation.ModelAttribute;
 @Controller
 @RequestMapping(value="/Employee")
 public class EmployeeController {
     
-    @RequestMapping(value = "/addbook", method = RequestMethod.GET)
+    @RequestMapping(value = "/addbook")
     public String AddBook(Model m)
     {
         EmployeeModel data = new EmployeeModel();
@@ -28,5 +29,12 @@ public class EmployeeController {
         m.addAttribute("_listTang", data.GetAllFloors());
         
         return "AddBook";
+    }
+    @RequestMapping(value = "/saveBook", method = RequestMethod.POST )
+    public String saveAddBook(@ModelAttribute(value = "_newbook") Sach _sach)
+    {
+        EmployeeModel data = new EmployeeModel();
+        data.SaveNewBook(_sach);
+        return "redirect:AddBook.htm";
     }
 }
