@@ -19,7 +19,7 @@ public class EmployeeModel {
     //   Begin:  Add New Book
     public List<Tacgia> GetAllAuthors(){
         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
-        List<Tacgia> Result = new ArrayList<Tacgia>();
+        List<Tacgia> Result = new ArrayList<>();
         try{
             s.beginTransaction();
             Criteria temp = s.createCriteria(Tacgia.class);
@@ -33,8 +33,8 @@ public class EmployeeModel {
         return Result;
     }   
     public List<Nhaxuatban> GetAllPublisher(){
-         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
-        List<Nhaxuatban> Result = new ArrayList<Nhaxuatban>();
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        List<Nhaxuatban> Result = new ArrayList<>();
         try{
             s.beginTransaction();
             Criteria temp = s.createCriteria(Nhaxuatban.class);
@@ -48,13 +48,49 @@ public class EmployeeModel {
         return Result;
     }
     public List<Nhomsach> GetAllBookGroups(){
-        return null;
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        List<Nhomsach> Result = new ArrayList<>();
+        try{
+            s.beginTransaction();
+            Criteria temp = s.createCriteria(Nhomsach.class);
+            Result = temp.list();
+            s.getTransaction().commit();
+        }
+        catch(Exception e)
+        {
+            Result = null;
+        }
+        return Result;
     }
     public List<Chude> GetAllTopics(){
-        return null;
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        List<Chude> Result = new ArrayList<>();
+        try{
+            s.beginTransaction();
+            Criteria temp = s.createCriteria(Chude.class);
+            Result = temp.list();
+            s.getTransaction().commit();
+        }
+        catch(Exception e)
+        {
+            Result = null;
+        }
+        return Result;
     }
     public List<Vitri> GetAllFloors(){
-        return null;
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        List<Vitri> Result = new ArrayList<>();
+        try{
+            s.beginTransaction();
+            Criteria temp = s.createCriteria(Vitri.class);
+            Result = temp.list();
+            s.getTransaction().commit();
+        }
+        catch(Exception e)
+        {
+            Result = null;
+        }
+        return Result;
     }
     public String SaveNewBook(XmlElement node)
     {   return null;

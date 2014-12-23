@@ -24,7 +24,7 @@ public class Chude  implements java.io.Serializable {
 
 
      private int id;
-     private Serializable tenChuDe;
+     private String tenChuDe;
      private Set<Sach> saches = new HashSet<Sach>(0);
 
     public Chude() {
@@ -34,7 +34,7 @@ public class Chude  implements java.io.Serializable {
     public Chude(int id) {
         this.id = id;
     }
-    public Chude(int id, Serializable tenChuDe, Set<Sach> saches) {
+    public Chude(int id, String tenChuDe, Set<Sach> saches) {
        this.id = id;
        this.tenChuDe = tenChuDe;
        this.saches = saches;
@@ -54,11 +54,11 @@ public class Chude  implements java.io.Serializable {
 
     
     @Column(name="TenChuDe")
-    public Serializable getTenChuDe() {
+    public String getTenChuDe() {
         return this.tenChuDe;
     }
     
-    public void setTenChuDe(Serializable tenChuDe) {
+    public void setTenChuDe(String tenChuDe) {
         this.tenChuDe = tenChuDe;
     }
 

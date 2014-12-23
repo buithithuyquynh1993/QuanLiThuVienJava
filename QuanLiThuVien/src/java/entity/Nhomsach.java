@@ -24,7 +24,7 @@ public class Nhomsach  implements java.io.Serializable {
 
 
      private int id;
-     private Serializable tenNhom;
+     private String tenNhom;
      private Set<Sach> saches = new HashSet<Sach>(0);
 
     public Nhomsach() {
@@ -34,7 +34,7 @@ public class Nhomsach  implements java.io.Serializable {
     public Nhomsach(int id) {
         this.id = id;
     }
-    public Nhomsach(int id, Serializable tenNhom, Set<Sach> saches) {
+    public Nhomsach(int id, String tenNhom, Set<Sach> saches) {
        this.id = id;
        this.tenNhom = tenNhom;
        this.saches = saches;
@@ -54,11 +54,11 @@ public class Nhomsach  implements java.io.Serializable {
 
     
     @Column(name="TenNhom")
-    public Serializable getTenNhom() {
+    public String getTenNhom() {
         return this.tenNhom;
     }
     
-    public void setTenNhom(Serializable tenNhom) {
+    public void setTenNhom(String tenNhom) {
         this.tenNhom = tenNhom;
     }
 

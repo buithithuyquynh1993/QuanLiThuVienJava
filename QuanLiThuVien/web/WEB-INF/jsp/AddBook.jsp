@@ -57,7 +57,7 @@
                 <span>Nhà xuất bản: </span>
                 <select>
                     <c:forEach items="${_listNXB}" var="em">
-                        <option value="${em.tenNxb}">${em.tenNxb}</option>
+                        <option value="${em.id}">${em.tenNxb}</option>
                     </c:forEach>
                 </select>
                 <span>Quốc gia: </span>
@@ -67,15 +67,15 @@
             <div class="row" style="margin-left:31%">
                     <span>Nhóm sách: </span>
                 <select>
-                    <option>a</option>
-                    <option>a</option>
-                    <option>a</option>
+                    <c:forEach items="${_listNhomSach}" var="em">
+                        <option value="${em.id}">${em.tenNhom}</option>
+                    </c:forEach>
                 </select><br/><br/>
                 <span>Chủ đề: </span>
                 <select>
-                    <option>a</option>
-                    <option>a</option>
-                    <option>a</option>
+                    <c:forEach items="${_listChuDe}" var="em">
+                        <option value="${em.id}">${em.tenChuDe}</option>
+                    </c:forEach>
                 </select>
             </div><br/>
             <h4>Vị trí sách trên kệ</h4><br/>
@@ -83,9 +83,9 @@
                 <div class="col-md-4 col-md-push-1">
                     <span>Tầng: </span>
                     <select>
-                        <option>a</option>
-                        <option>a</option>
-                        <option>a</option>
+                    <c:forEach items="${_listTang}" var="em">
+                        <option value="${em.tang}">${em.tang}</option>
+                    </c:forEach>
                     </select>
                 </div>
                 <div class="col-md-4 col-md-push-1">

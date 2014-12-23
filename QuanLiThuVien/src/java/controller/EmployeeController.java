@@ -23,6 +23,9 @@ public class EmployeeController {
         
         m.addAttribute("_listTG", data.GetAllAuthors());
         m.addAttribute("_listNXB", data.GetAllPublisher());
+        m.addAttribute("_listNhomSach", data.GetAllBookGroups());
+        m.addAttribute("_listChuDe", data.GetAllTopics());
+        m.addAttribute("_listTang", data.GetAllFloors());
         
         return "AddBook";
     }
