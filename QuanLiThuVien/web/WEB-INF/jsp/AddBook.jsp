@@ -78,32 +78,14 @@
                     </c:forEach>
                 </select>
             </div><br/>
-            <h4>Vị trí sách trên kệ</h4><br/>
-            <div class="row subsOption">
-                <div class="col-md-4 col-md-push-1">
+            <h4>Vị trí sách trên kệ (Tầng - Ngăn - Kệ)</h4>
+            <div class="row" style="margin-left:31%">
                     <span>Tầng: </span>
                     <select>
-                    <c:forEach items="${_listTang}" var="em">
-                        <option value="${em.tang}">${em.tang}</option>
-                    </c:forEach>
+                        <c:forEach items="${_listTang}" var="em">
+                            <option value="${em.id}">${em.tang} - ${em.ngan} - ${em.ke}</option>
+                        </c:forEach>
                     </select>
-                </div>
-                <div class="col-md-4 col-md-push-1">
-                    <span>Ngăn: </span>
-                    <select>
-                        <option>a</option>
-                        <option>a</option>
-                        <option>a</option>
-                    </select>
-                    </div>
-                <div class="col-md-4 col-md-push-1">
-                    <span>Kệ: </span>
-                    <select>
-                        <option>a</option>
-                        <option>a</option>
-                        <option>a</option>
-                    </select>
-                </div>
             </div>
             <div class="row" style="margin-top:30px">
                     <div class="col-md-2 col-md-push-3">

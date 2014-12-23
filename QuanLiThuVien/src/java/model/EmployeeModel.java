@@ -93,7 +93,7 @@ public class EmployeeModel {
         return Result;
     }
     public String SaveNewBook(XmlElement node)
-    {   return null;
+    {
     }
     //   End:  Add New Book
 }
