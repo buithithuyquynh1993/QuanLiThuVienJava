@@ -48,7 +48,7 @@
             <div class="row text-center">
                     <span>Tác giả: </span>
                 <select>
-                    <c:forEach items="${_list}" var="em">
+                    <c:forEach items="${_listTG}" var="em">
                         <option value="${em.id}">${em.tenTacGia}</option>
                     </c:forEach>
                 </select>
@@ -56,9 +56,9 @@
                 <label>nnnn</label><br/><br/>
                 <span>Nhà xuất bản: </span>
                 <select>
-                    <option>a</option>
-                    <option>a</option>
-                    <option>a</option>
+                    <c:forEach items="${_listNXB}" var="em">
+                        <option value="${em.tenNxb}">${em.tenNxb}</option>
+                    </c:forEach>
                 </select>
                 <span>Quốc gia: </span>
                 <label>nnnn</label>

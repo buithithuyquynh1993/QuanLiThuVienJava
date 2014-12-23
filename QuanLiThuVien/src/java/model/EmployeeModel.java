@@ -23,8 +23,6 @@ public class EmployeeModel {
         try{
             s.beginTransaction();
             Criteria temp = s.createCriteria(Tacgia.class);
-            //Query query= s.createSQLQuery("from TacGia");
-            //Result=query.list();
             Result = temp.list();
             s.getTransaction().commit();
         }
@@ -35,7 +33,19 @@ public class EmployeeModel {
         return Result;
     }   
     public List<Nhaxuatban> GetAllPublisher(){
-        return null;
+         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        List<Nhaxuatban> Result = new ArrayList<Nhaxuatban>();
+        try{
+            s.beginTransaction();
+            Criteria temp = s.createCriteria(Nhaxuatban.class);
+            Result = temp.list();
+            s.getTransaction().commit();
+        }
+        catch(Exception e)
+        {
+            Result = null;
+        }
+        return Result;
     }
     public List<Nhomsach> GetAllBookGroups(){
         return null;

@@ -20,9 +20,10 @@ public class EmployeeController {
     public String AddBook(Model m)
     {
         EmployeeModel data = new EmployeeModel();
-        List<Tacgia> list=data.GetAllAuthors();
-        System.out.println(list.size());
-        m.addAttribute("_list", data.GetAllAuthors());
+        
+        m.addAttribute("_listTG", data.GetAllAuthors());
+        m.addAttribute("_listNXB", data.GetAllPublisher());
+        
         return "AddBook";
     }
 }
