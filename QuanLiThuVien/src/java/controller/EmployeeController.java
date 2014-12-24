@@ -30,11 +30,21 @@ public class EmployeeController {
         
         return "AddBook";
     }
-    @RequestMapping(value = "/saveBook", method = RequestMethod.POST )
+    
+    @RequestMapping(value = "/savebook", method = RequestMethod.POST )
     public String saveAddBook(@ModelAttribute(value = "_newbook") Sach _sach)
     {
-        EmployeeModel data = new EmployeeModel();
-        data.SaveNewBook(_sach);
-        return "redirect:AddBook.htm";
+        try
+        {
+            EmployeeModel data = new EmployeeModel();
+            data.SaveNewBook(_sach);
+            //return "savebook.htm";
+            return "redirect:addbook.htm";
+        }
+        catch(Exception ex)
+        {
+            System.out.println("Dữ liệu chưa đúng");
+            ex.printStackTrace();
+        }
     }
 }
