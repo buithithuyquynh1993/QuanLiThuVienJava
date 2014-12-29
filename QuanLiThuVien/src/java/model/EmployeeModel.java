@@ -92,13 +92,19 @@ public class EmployeeModel {
         }
         return Result;
     }
-    public String SaveNewBook(Sach _sach)
+    public String SaveNewBook(Sach _sach, int id_tacgia)
     {
         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+//        Query _query = s.createQuery("INSERT INTO [dbo].[SACH]([TenSach],[NamXB],[Tap],[Cuon],[TrangThai]," +
+//                "[NoiDungTomTat],[MucLuc],[IDNhaXuatBan],[IDNhomSach],[IDViTri],[IDChuDe]) VALUES ("
+//                + _sach.getTenSach()+")");
         String result = "";
         try
         {
             s.beginTransaction();
+            
+            Tacgia _tacgia = (Tacgia)s.get(Tacgia.class, id_tacgia);
+            _sach.getTacgias().add(_tacgia);
             s.save(_sach);
             s.getTransaction().commit();
             result = "Lưu thành công";

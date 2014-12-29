@@ -13,7 +13,7 @@
     <jsp:attribute name= "content">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/templates/css/css_myself.css" />
         
-        <f:form class="subscribeForm ticket-item" action="savebook.htm" ModelAttribute="_newbook">
+        <f:form class="subscribeForm ticket-item" action="savebook.htm" modelAttribute="_newbook">
             <h3 class="widget-title text-center" style="display:block">Thêm sách mới</h3>
             <h4>Thông tin sách</h4><br>
             <div class="row">
@@ -25,7 +25,8 @@
                     <input type="text" name="tap"/><br/>
                     <span>Cuốn:<br> 
                         <font style="font-size: 10px; color: red; font-style: italic"> Vui lòng nhập số </font>
-                    </span>		<input type="text" name="cuon"/>
+                    </span>
+                    <input type="text" name="cuon"/>
                 </div>
                 <div class="col-md-6 col-sm-12 col-md-push-1">
                     <div style="float: left"><br/>
@@ -55,16 +56,16 @@
             <h4>Thông tin tác giả - Nhà xuất bản</h4>
             <div class="row text-center">
                     <span>Tác giả: </span>
-                    <select onchange="script_display_quoctichTacGia(value)">
+                <select onchange="script_display_quoctichTacGia(value)" name="id_tacgia">
                     <c:forEach items="${_listTG}" var="em">
-                        <option value="${em}" >${em.tenTacGia}</option>
+                        <option value=${em.id}>${em.tenTacGia}</option>
                     </c:forEach>
                 </select>
                 <span>Quốc tịch: </span>
                 <label id="_quoctichTacGia">nnnn</label><br/><br/>
                 <span>Nhà xuất bản: </span>
-                <select >
-                    <c:forEach items="${_listNXB}" var="em">
+                <select name="nhaxuatban.id">
+                    <c:forEach items="${_listNXB}" var="em" >
                         <option value="${em.id}">${em.tenNxb}</option>
                     </c:forEach>
                 </select>
@@ -74,13 +75,13 @@
             <h4>Thông tin nhóm sách - Chủ đề</h4>
             <div class="row" style="margin-left:31%">
                     <span>Nhóm sách: </span>
-                    <select>
+                    <select name="nhomsach.id">
                     <c:forEach items="${_listNhomSach}" var="em">
                         <option value="${em.id}">${em.tenNhom}</option>
                     </c:forEach>
                 </select><br/><br/>
                 <span>Chủ đề: </span>
-                <select >
+                <select name="chude.id">
                     <c:forEach items="${_listChuDe}" var="em">
                         <option value="${em.id}">${em.tenChuDe}</option>
                     </c:forEach>
@@ -89,8 +90,8 @@
             <h4>Vị trí sách trên kệ (Tầng - Ngăn - Kệ)</h4>
             <div class="row" style="margin-left:31%">
                 <span>Vị trí: </span>
-                <select>
-                    <c:forEach items="${_listTang}" var="em">
+                <select name="vitri.id">
+                    <c:forEach items="${_listTang}" var="em" >
                         <option value="${em.id}">${em.tang} - ${em.ngan} - ${em.ke}</option>
                     </c:forEach>
                 </select>

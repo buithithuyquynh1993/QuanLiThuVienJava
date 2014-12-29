@@ -5,14 +5,14 @@
  */
 package controller;
 
+import entity.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import model.*;
-import java.util.*;
 import org.springframework.ui.Model;
-import entity.*;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping(value="/Employee")
 public class EmployeeController {
@@ -32,19 +32,19 @@ public class EmployeeController {
     }
     
     @RequestMapping(value = "/savebook", method = RequestMethod.POST )
-    public String saveAddBook(@ModelAttribute(value = "_newbook") Sach _sach)
+    public String saveAddBook(@ModelAttribute (value = "_newbook") Sach _sach, @RequestParam("id_tacgia") int id_tacgia)
     {
         try
         {
             EmployeeModel data = new EmployeeModel();
-            data.SaveNewBook(_sach);
-            //return "savebook.htm";
-            return "redirect:addbook.htm";
+            data.SaveNewBook(_sach, id_tacgia);
+            return "savebook.htm";
         }
         catch(Exception ex)
         {
             System.out.println("Dữ liệu chưa đúng");
             ex.printStackTrace();
         }
+         return "redirect:addbook.htm";
     }
 }
