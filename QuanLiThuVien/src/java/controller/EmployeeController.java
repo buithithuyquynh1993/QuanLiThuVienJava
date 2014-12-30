@@ -38,7 +38,7 @@ public class EmployeeController {
         {
             EmployeeModel data = new EmployeeModel();
             data.SaveNewBook(_sach, id_tacgia);
-            return "savebook.htm";
+            //return "savebook.htm";
         }
         catch(Exception ex)
         {
@@ -47,4 +47,3 @@ public class EmployeeController {
         }
          return "redirect:addbook.htm";
     }
-}

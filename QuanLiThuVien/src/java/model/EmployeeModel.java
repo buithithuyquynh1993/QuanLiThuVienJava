@@ -95,14 +95,10 @@ public class EmployeeModel {
     public String SaveNewBook(Sach _sach, int id_tacgia)
     {
         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
-//        Query _query = s.createQuery("INSERT INTO [dbo].[SACH]([TenSach],[NamXB],[Tap],[Cuon],[TrangThai]," +
-//                "[NoiDungTomTat],[MucLuc],[IDNhaXuatBan],[IDNhomSach],[IDViTri],[IDChuDe]) VALUES ("
-//                + _sach.getTenSach()+")");
         String result = "";
         try
         {
             s.beginTransaction();
-            
             Tacgia _tacgia = (Tacgia)s.get(Tacgia.class, id_tacgia);
             _sach.getTacgias().add(_tacgia);
             s.save(_sach);
@@ -119,6 +115,21 @@ public class EmployeeModel {
     //   End:  Add New Book
     
     //Begin Update Book
+    public Sach getBook (int id_sach){
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        Sach Kq = new Sach();
+        try{
+             s.beginTransaction();
+            Kq = (Sach)s.get(Sach.class, id_sach);
+            s.getTransaction().commit();
+        }
+        catch (Exception ex){
+            s.getTransaction().rollback();
+            Kq = null;
+        }
+        return Kq;
+    }
+    
     public String EditBook(Sach _sach)
     {
         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
